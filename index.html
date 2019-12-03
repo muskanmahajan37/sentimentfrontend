@@ -34,7 +34,7 @@
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("output").innerHTML += "<div>" + JSON.parse(xhttp.responseText).args.text + "</div>";
+                    document.getElementById("output").innerHTML += "<div>" + xhttp.responseText + "</div>";
                 }
             };
             xhttp.open("GET", "https://cors-anywhere.herokuapp.com/http://52.207.228.30:5000/predict?input=" + review, true);
